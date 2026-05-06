@@ -97,16 +97,14 @@
         function enviarWhatsapp(event) {
             event.preventDefault
 
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5585997895205';
+            const nome = document.getElementById('nome');
+            const mensagem = document.getElementById('mensagem');
 
-            const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
+            const texto = `Olá, meu nome é ${nome.value} e minha mensagem é: ${mensagem.value}`;
+
             const msgFormatada = encodeURIComponent(texto);
 
-            const url = `https://w.app/vmm8ez`;
-
-            console.log(url)
+            const url = `https://w.app/vmm8ez?text=${msgFormatada}`;
 
             window.open(url, '_blank');
         }
