@@ -97,8 +97,8 @@
         function enviarWhatsapp(event) {
             event.preventDefault
 
-            const nome = document.getElementById('nome');
-            const mensagem = document.getElementById('mensagem');
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
             const telefone = '5585997895205';
 
             const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
