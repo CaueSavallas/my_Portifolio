@@ -95,12 +95,13 @@
 
     <script>
         function enviarWhatsapp(event) {
+            event.preventDefault
 
+            const nome = document.getElementById('nome');
             const mensagem = document.getElementById('mensagem');
             const telefone = '5585997895205';
 
-            const texto = `Olá, meu nome é ${nome.value} e minha mensagem é: ${mensagem.value}`;
-
+            const texto = `Olá, meu nome é ${nome.value}, ${mensagem.value}`;
             const msgFormatada = encodeURIComponent(texto);
 
             const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
